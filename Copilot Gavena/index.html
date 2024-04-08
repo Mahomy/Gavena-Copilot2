@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoPilot Widget</title>
+</head>
+<body>
+<center>
+<!-- Element to trigger the CoPilot -->
+<button id="triggerSelector">Click to chat with CoPilot</button>
+
+<!-- Script to initialize CoPilot -->
+<script src="https://unpkg.com/@openchatai/copilot-widget@latest/dist-embed/pilot.js"></script>
+<script>
+  // Options for CoPilot
+  const options = {
+     apiUrl: "https://api.opencopilot.so/backend",
+     socketUrl: "https://api.opencopilot.so",
+     initialMessage: "Hey! happy to help.",
+     token: "Xf4TvAL60PKoMvmE", // Your CoPilot token
+     triggerSelector: "#triggerSelector", // Selector for the trigger element
+     headers: {
+       // Optional headers
+       Authorization: "Bearer your_auth_token_goes_here",
+       AnyKey: "AnyValue"
+     },
+     containerProps: {
+       // Optional container props
+       className: "your-custom-class-name",
+       style: {
+           position: "fixed",
+           height: "100%",
+           bottom: "0",
+           right: "0",
+           width: "400px",
+         },
+     } 
+   };
+
+   // Initialize CoPilot when the document is fully loaded
+   window.addEventListener("DOMContentLoaded", () => initAiCoPilot(options));
+</script>
+</center>
+</body>
+</html>
+
+<!--1️⃣ code CSS below -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+#triggerSelector{
+
+font-family: Roboto, sans-serif;
+font-weight: 0;
+font-size: 14px;
+color: #fff;
+background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
+padding: 10px 30px;
+border: 2px solid #0066cc;
+box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+border-radius: 50px;
+transition : 878ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+margin-top:200px;
+}
+
+#triggerSelector:hover{
+
+transition : 878ms;
+padding: 10px 50px;
+transform : translateY(-0px);
+background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
+color: #0066cc;
+border: solid 2px #0066cc;
+}
+
+body{
+background-image: url('https://w0.peakpx.com/wallpaper/618/820/HD-wallpaper-winter-night-fantasy-snow-graphics-illustration-vector-night-winter.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+</style>
+
+
+
